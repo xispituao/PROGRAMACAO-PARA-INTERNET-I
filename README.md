@@ -2,13 +2,13 @@
 
 Esse repositório está destinado a disciplina de programação para internet do 3° período de Análise e Desenvolvimento de Sitemas.
 <p align="center">
-    <a href="#meus dados pessoais">Dados Pessoais</a> &bull;
+    <a href="#meus-dados-pessoais">Dados Pessoais</a> &bull;
     <a href="#contatos">Contatos</a> &bull;
     <a href="#interesses e ambições">Interesses e Ambições</a> &bull;
     <a href="#habilidades e qualidades">Habilidades e Qualidades</a>
 </p>
 
-## MEUS DADOS PESSOAIS 
+## MEUS-DADOS-PESSOAIS 
 - Nome: Natanael de Sousa Silva
 - Sexo: Masculino
 - Idade: 20 anos
