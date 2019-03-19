@@ -4,8 +4,10 @@ Esse repositório está destinado a disciplina de programação para internet do
 <p align="center">
     <a href="#meus-dados-pessoais">Dados Pessoais</a> &bull;
     <a href="#contatos">Contatos</a> &bull;
-    <a href="#interesses e ambições">Interesses e Ambições</a> &bull;
+    <a href="#interesses-e-ambições">Interesses e Ambições</a> &bull;
     <a href="#habilidades e qualidades">Habilidades e Qualidades</a>
+    <a href="#linguagens">Linguagens</a>
+    <a href="#gostos">Gostos/a>
 </p>
 
 ## MEUS-DADOS-PESSOAIS 
@@ -29,12 +31,12 @@ Esse repositório está destinado a disciplina de programação para internet do
     nataso.s11@gmail.com
     ```
     
-## Interesses e Ambições
+## Interesses-e-Ambições
 - Ser um ótimo profissional de T.I e ser referêcia no mercado;
 - Sempre atualizar meus conhecimentos técnicos de informatica por meios de cursos, video aulas ou livros;
 - Algum dia ainda participar de grandes empresas tecnológicas como a Google, Microsoft e quem sabe a Apple.
 
-## Habilidades e Qualidades
+## Habilidades-e-Qualidades
 - Possuo certa facilidade com números e processos lógicos;
 - Determinado, quando coloco algo na cabeça não tiro mais;
 - Em frente a algum desafio ou problema não demonstro medo nem recuo;
