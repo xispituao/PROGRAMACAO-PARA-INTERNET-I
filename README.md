@@ -33,15 +33,14 @@ Esse repositório está destinado a disciplina de programação para internet do
     
 ## Interesses-e-Ambições
 - Ser um ótimo profissional de T.I e ser referêcia no mercado;
-- Sempre manter atualizado meus conhecimentos técnicos de informatica por meios de cursos, video aulas ou livros;
+- Back-End;
+- Desenvolvimento web e mobile;
 - Algum dia ainda participar de grandes empresas tecnológicas como a Google, Microsoft e quem sabe a Apple.
 
 ## Habilidades-e-Qualidades
 - Possuo certa facilidade com números e processos lógicos;
 - Determinado, quando coloco algo na cabeça não tiro mais;
 - Em frente a algum desafio ou problema não demonstro medo nem recuo;
-- Fidelidade é algo que prezo muito e pratico;
-- Possuo um senso de justiça forte;
 
 ## Linguagens 
 ```
