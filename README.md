@@ -5,7 +5,7 @@ Esse repositório está destinado a disciplina de programação para internet do
     <a href="#meus-dados-pessoais">Dados Pessoais</a> &bull;
     <a href="#contatos">Contatos</a> &bull;
     <a href="#interesses-e-ambições">Interesses e Ambições</a> &bull;
-    <a href="#habilidades e qualidades">Habilidades e Qualidades</a> &bull;
+    <a href="#habilidades-e-qualidades">Habilidades e Qualidades</a> &bull;
     <a href="#linguagens">Linguagens</a> &bull;
     <a href="#gostos">Gostos</a> 
 </p>
