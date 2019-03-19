@@ -33,7 +33,7 @@ Esse repositório está destinado a disciplina de programação para internet do
     
 ## Interesses-e-Ambições
 - Ser um ótimo profissional de T.I e ser referêcia no mercado;
-- Sempre atualizar meus conhecimentos técnicos de informatica por meios de cursos, video aulas ou livros;
+- Sempre manter atualizado meus conhecimentos técnicos de informatica por meios de cursos, video aulas ou livros;
 - Algum dia ainda participar de grandes empresas tecnológicas como a Google, Microsoft e quem sabe a Apple.
 
 ## Habilidades-e-Qualidades
@@ -50,6 +50,5 @@ Python, PHP, SQL, HTML, CSS, Java, Android
 ## Gostos
 - Amo tecnologia principalmente a área da programação;
 - Curto jogos, não só de jogar mas de saber como foi desenvolvido;
-- Adoro ficar deitado 
 
 
