@@ -4,8 +4,8 @@ Esse repositório está destinado a disciplina de programação para internet do
 <p align="center">
     <a href="#meus dados pessoais">Dados Pessoais</a> &bull;
     <a href="#contatos">Contatos</a> &bull;
-    <a href="#posts">Posts</a> &bull;
-    <a href="#installation">Installation</a>
+    <a href="#interesses e ambições">Interesses e Ambições</a> &bull;
+    <a href="#habilidades e qualidades">Habilidades e Qualidades</a>
 </p>
 
 ## MEUS DADOS PESSOAIS 
@@ -49,3 +49,5 @@ Python, PHP, SQL, HTML, CSS, Java, Android
 - Amo tecnologia principalmente a área da programação;
 - Curto jogos, não só de jogar mas de saber como foi desenvolvido;
 - Adoro ficar deitado 
+
+
