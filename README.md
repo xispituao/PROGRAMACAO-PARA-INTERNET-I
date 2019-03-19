@@ -48,7 +48,7 @@ Esse repositório está destinado a disciplina de programação para internet do
 Python, PHP, SQL, HTML, CSS, Java, Android 
 ```
 ## Gostos
-- Amo tecnologia principalmente a área da programação;
+- Amo tecnologia principalmente a área da programação e a de manutenção de hardware;
 - Curto jogos, não só de jogar mas de saber como foi desenvolvido;
 
 
