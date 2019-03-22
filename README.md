@@ -5,7 +5,6 @@ Esse repositório está destinado a disciplina de programação para internet do
     <a href="#meus-dados-pessoais">Dados Pessoais</a> &bull;
     <a href="#contatos">Contatos</a> &bull;
     <a href="#interesses-e-ambições">Interesses e Ambições</a> &bull;
-    <a href="#habilidades-e-qualidades">Habilidades e Qualidades</a> &bull;
     <a href="#linguagens">Linguagens</a> &bull;
     <a href="#gostos">Gostos</a> 
 </p>
@@ -33,14 +32,10 @@ Esse repositório está destinado a disciplina de programação para internet do
     
 ## Interesses-e-Ambições
 - Ser um ótimo profissional de T.I e ser referêcia no mercado;
-- Back-End;
+- I.A
 - Desenvolvimento web e mobile;
 - Algum dia ainda participar de grandes empresas tecnológicas como a Google, Microsoft e quem sabe a Apple.
 
-## Habilidades-e-Qualidades
-- Possuo certa facilidade com números e processos lógicos;
-- Determinado, quando coloco algo na cabeça não tiro mais;
-- Em frente a algum desafio ou problema não demonstro medo nem recuo;
 
 ## Linguagens 
 ```
