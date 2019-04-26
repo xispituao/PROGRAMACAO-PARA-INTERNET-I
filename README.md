@@ -39,7 +39,7 @@ Esse repositório está destinado a disciplina de programação para internet do
 
 ## Linguagens 
 ```
-Python, PHP, SQL, HTML, CSS, Java, Android 
+Python, PHP, SQL, HTML, CSS, Java, Android, Ruby
 ```
 ## Gostos
 - Amo tecnologia principalmente a área da programação e a de manutenção de hardware;
