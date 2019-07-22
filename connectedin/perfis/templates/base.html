@@ -1,0 +1,164 @@
+{% load staticfiles %}
+<!DOCTYPE html>
+<html lang="pt">
+    <head>
+        <meta charset="utf-8">
+        <meta name="viewport" content="width=device-width">
+        <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.1.3/css/bootstrap.min.css" integrity="sha384-MCw98/SFnGE8fJT3GXwEOngsV7Zt27NXFoaoApmYm81iuXoPkFOJwJ8ERdknLPMO" crossorigin="anonymous">
+        <title>ConnectedIn</title>
+    </head>
+    <body style="background-color:Lightblue;">
+            <nav class="navbar navbar-expand-lg navbar-light bg-primary">
+                    <a class="navbar-brand" href="{% url 'index' %}"><font color="white" size="5px">Connectedin</font></a>
+                    <div class="collapse navbar-collapse" id="textoNavbar">
+                        <ul class="navbar-nav mr-auto">
+                            <li class="nav-item">
+                                <a class="navbar-brand" href="{% url 'buscar_usuario' %}"><font color="white" size="4px">Todos os Perfis</font></a>
+                            </li>
+                            <li class="nav-item">
+                            <form class="form-inline" action="{% url 'buscar_usuario' %}" method="POST">
+                                {% csrf_token %}
+                                <input class="form-control mr-sm-2" type="search" name="busca" placeholder="Pesquisar perfis" aria-label="Pesquisar">
+                                <button class="btn btn-success my-2 my-sm-0" type="submit">Pesquisar</button>
+                            </form>
+                            </li>
+                        </ul>
+                        <a class="navbar-brand mr-sm-3" href="{% url 'exibir' perfil_logado.id %}"><font color="white" size="4px">{{ perfil_logado.nome }}</font></a>
+                        <a class="navbar-brand" href="{% url 'index' %}"><font color="white" size="4px">Página inicial</font></a>
+                        <a href="/logout/"><button type="button" class="btn btn-danger" onclick="return confirm('Deseja sair do connectedIn?');"><font color="white" size="4px">Sair</font></button></a>
+                        <!-- <a href="{% url 'exibir' perfil_logado.id %}">{{ perfil_logado.nome }}</a> -->
+                    </div>
+                    
+            </nav>
+            <div class="container">
+                    <div class="row">
+                            <nav class="col-lg-3">  
+                                <div class="panel panel-default">
+                                    <div class="panel-heading">
+                                        <a href="{% url 'exibir' perfil_logado.id %}">{{ perfil.nome }}</a>
+                                        <strong>Todos os Perfis</strong>
+                                    </div>
+                                    {% if perfis %}
+                                    <ul class="list-group">
+                                        {% for perfil in perfis %}
+                                            <li class="list-group-item">
+                                                <a href="{% url 'exibir' perfil.id %}">{{ perfil.nome }}</a>
+                                                / {{ perfil.email }}
+                                            </li>
+                                        {% endfor %}
+                                    </ul>
+                                    {% else %}
+                                        <p>Nenhum Perfil encontrado</p>
+                                    {% endif %}
+                                </div>
+                                <div class="panel panel-default">
+                                    {% with total_de_contatos=perfil_logado.contatos.count %}
+                                        {% if total_de_contatos %}
+                                            <div class="panel-heading">
+                        
+                                                <strong>Você tem {{total_de_contatos}}
+                                                contato{{ total_de_contatos|pluralize }}</strong>
+                        
+                                            </div>
+                                            <ul class="list-group">
+                                                {% for contato in perfil_logado.contatos.all %}
+                                                    <a href="{% url 'exibir' contato.id %}"
+                                                        class="list-group-item">{{ contato.nome }} // {{ contato.email }}</a>
+                                                {% endfor %}
+                                            </ul>
+                                        {% else %}
+                                            <div class="panel-body">
+                                                <ul class="list-group">
+                                                    <li class="list-group-item"><p>Você não possui contatos no momento :(</p></li>
+                                                </ul>
+                                            </div>
+                                        {% endif %}
+                                    {% endwith %}
+                                </div>
+                            </nav>
+                {% block body %}
+                {% endblock %}
+            
+                <aside class="col-lg-3">
+                    <div class="panel panel-default">
+                        {% with total_de_convites=perfil_logado.convites_recebidos.count %}
+                            {% if total_de_convites %}
+                                <div class="panel-heading">
+                                    <strong>Você tem {{ total_de_convites }}
+                                    convite{{ total_de_convites|pluralize }}
+                                    aguardando aprovação</strong>
+                                </div>
+                                <ul class="list-group">
+                                    {% for convite in perfil_logado.convites_recebidos.all %}
+                                        <li class="list-group-item">
+                                            {{convite.solicitante.nome}}
+                                            <a href="{% url 'recusar' convite.id %}" class="badge btn">recusar</a>
+                                            <a href="{% url 'aceitar' convite.id %}" class="badge btn">aceitar</a>
+                                        </li>
+                                    {% endfor %}
+                                </ul>
+                            {% else %}
+                                <div class="panel-body">
+                                    <ul class="list-group">
+                                        <li class="list-group-item"><p>Nenhum convite recebido :(</p></li>
+                                    </ul>
+                                </div>
+                            {% endif %}
+                        {% endwith %}
+                    </div>
+                    <div class="panel panel-default">
+                        {% with total_de_convites=perfil_logado.convites_feitos.count %}
+                            {% if total_de_convites %}
+                                <div class="panel-heading">
+                                    <strong>Convites enviados</strong>
+                                </div>
+                                <ul class="list-group">
+                                    {% for convite in perfil_logado.convites_feitos.all %}
+                                        <li class="list-group-item">
+                                            {{convite.convidado.nome}}
+                                            <a href="{% url 'recusar' convite.id %}" class="badge btn">cancelar</a>
+                                        </li>
+                                    {% endfor %}
+                                </ul>
+                            {% else %}
+                                <div class="panel-body">
+                                    <ul class="list-group">
+                                        <li class="list-group-item"><p>Nenhum convite enviado</p></li>
+                                    </ul>
+                                </div>
+                            {% endif %}
+                        {% endwith %}
+                    </div>
+                </aside>
+            
+                {% if perfil_logado.superuser %}
+                    <div class="panel panel-default">
+                        <div class="panel-heading">
+                            <strong>Todos os perfis</strong>
+                        </div>
+                        {% if perfis %}
+                        <div style="overflow-y: scroll; height: 200px;">
+                            <ul class="list-group">
+                                {% for perfil in perfis %}
+                                    {% if perfil.nome != perfil_logado.nome %}
+                                        <li class="list-group-item">
+                                            <a href="{% url 'exibir' perfil.id %}"> {{ perfil.nome }}
+                                            </a>
+                                        </li>
+                                    {% endif %}
+                                {% endfor %}
+                            </ul>
+                                {% else %}
+                                    <p>Não há perfis cadastrados</p>
+                                {% endif %}
+            
+                         </div>
+                    </div>
+                {% endif %}
+            </div>
+            </div>
+        <script src="https://code.jquery.com/jquery-3.3.1.slim.min.js" integrity="sha384-q8i/X+965DzO0rT7abK41JStQIAqVgRVzpbzo5smXKp4YfRvH+8abtTE1Pi6jizo" crossorigin="anonymous"></script>
+        <script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.14.3/umd/popper.min.js" integrity="sha384-ZMP7rVo3mIykV+2+9J3UJ46jBk0WLaUAdn689aCwoqbBJiSnjAK/l8WvCWPIPm49" crossorigin="anonymous"></script>
+        <script src="https://stackpath.bootstrapcdn.com/bootstrap/4.1.3/js/bootstrap.min.js" integrity="sha384-ChfqqxuZUCnJSK3+MXmPNIyE6ZbWh2IMqE241rYiqJxyMiZ6OW/JmZQ5stwEULTy" crossorigin="anonymous"></script>
+    </body>
+</html>

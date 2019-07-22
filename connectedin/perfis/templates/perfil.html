@@ -1,0 +1,27 @@
+{% extends "base.html" %}
+{% block body %}
+<div class="row">
+    <div class="col-lg-12">
+        <h2 style="margin-top:0">{{perfil.nome}}</h2>
+        <address>
+            <strong>{{perfil.nome_empresa}}</strong><br/>
+            <abbr title="Telefone">Tel:</abbr> {{perfil.telefone}}<br/>
+
+            <a href="mailto:{{perfil.email}}">{{perfil.email}}</a>
+        </address>
+        {% if ja_eh_contato %}
+            <div class="well well-sm">Vocês estão conectados!</div>
+            <a href="{% url 'desfazer_amizade' perfil.id %}" class="btn btn-danger poll-right"
+               onclick="return confirm('Deseja excluir este contato?');">desfazer amizade</a>
+        {% else %}
+            {% if perfil == perfil_logado %}
+                <a href="{% url 'alterar_senha' %}"
+                    class="btn btn-success" role="button">alterar senha</a>
+            {% else %}
+                <a href="{% url 'convidar' perfil.id %}"
+                    class="btn btn-success" role="button">convidar</a>
+            {% endif %}
+        {% endif %}
+    </div>
+</div>
+{% endblock %}
